@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="lariQuei: pizzas, bebidas e sobremesas para quando bate o larique. Veja o cardápio, os horários e reserve sua mesa.">
+  <title>lariQuei | Cardápio e reservas</title>
+  <link rel="icon" href="img/lariQuei_logo_simplificada.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container topo__conteudo">
+      <a href="#inicio" class="topo__marca" aria-label="lariQuei, ir para o início">
+        <img src="img/lariQuei_logo_simplificada.png" alt="" width="44" height="44">
+        <span>lariQuei</span>
+      </a>
+      <nav aria-label="Menu principal">
+        <ul class="menu">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#horarios">Horários</a></li>
+          <li><a href="#reserva">Reservas</a></li>
+          <li><a href="#carrinho">Carrinho <span id="contador" class="selo">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="hero">
+      <div class="container hero__conteudo">
+        <img src="img/lariQuei_logo.png" alt="lariQuei, com uma coroa sobre a letra Q" width="420" height="246" class="hero__logo">
+        <p class="hero__texto">Bateu aquela larica? Se acomode no seu troninho que a gente resolve com pizza quentinha, bebida gelada e sobremesa de sobra.</p>
+        <div class="hero__acoes">
+          <a href="#cardapio" class="botao botao--amarelo">Ver cardápio</a>
+          <a href="#reserva" class="botao botao--contorno">Reservar mesa</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="secao">
+      <div class="container">
+        <h2>Sobre o lariQuei</h2>
+        <p class="secao__intro">Nascemos de uma ideia simples: comida boa, feita na hora, para qualquer hora. Aqui você come no salão, pede para viagem ou recebe em casa.</p>
+        <ul class="destaques">
+          <li>
+            <h3>Feito na hora</h3>
+            <p>Massa aberta e ingredientes preparados a cada pedido.</p>
+          </li>
+          <li>
+            <h3>Para todo mundo</h3>
+            <p>Opções com carne, vegetarianas e porções para dividir.</p>
+          </li>
+          <li>
+            <h3>Entrega rápida</h3>
+            <p>Delivery nos mesmos dias de funcionamento do salão.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="cardapio" class="secao secao--alt">
+      <div class="container">
+        <h2>Cardápio</h2>
+        <p class="secao__intro">Escolha por categoria. Os valores são para uma unidade de cada item.</p>
+
+        <section class="categoria" aria-labelledby="cat-pizzas">
+          <h3 id="cat-pizzas"><span aria-hidden="true">🍕</span> Pizzas</h3>
+          <div class="grade-cardapio">
+            <article class="item">
+              <h4>Margherita</h4>
+              <p>Molho de tomate, mussarela, tomate fresco e manjericão.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 42,00</p>
+                <button type="button" class="botao botao--add" data-nome="Margherita" data-preco="42.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Calabresa</h4>
+              <p>Calabresa fatiada, cebola roxa, mussarela e orégano.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 46,00</p>
+                <button type="button" class="botao botao--add" data-nome="Calabresa" data-preco="46.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Frango com catupiry</h4>
+              <p>Frango desfiado, catupiry cremoso e milho.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 49,00</p>
+                <button type="button" class="botao botao--add" data-nome="Frango com catupiry" data-preco="49.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>lariQueijo</h4>
+              <p>Mussarela, provolone, parmesão e gorgonzola.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 52,00</p>
+                <button type="button" class="botao botao--add" data-nome="lariQueijo" data-preco="52.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Vegana</h4>
+              <p>Molho de tomate, mussarela vegana e orégano.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 44,00</p>
+                <button type="button" class="botao botao--add" data-nome="Vegana" data-preco="44.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Especial lariQuei</h4>
+              <p>Molho de tomate, mussarela, frango desfiado, calabresa, borda recheada (cheddar ou catupiry) e orégano.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 60,00</p>
+                <button type="button" class="botao botao--add" data-nome="Especial lariQuei" data-preco="60.00">Adicionar</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="categoria" aria-labelledby="cat-bebidas">
+          <h3 id="cat-bebidas"><span aria-hidden="true">🥤</span> Bebidas</h3>
+          <div class="grade-cardapio">
+            <article class="item">
+              <h4>Refri lata</h4>
+              <p>Cola, guaraná, uva ou laranja, 350 ml.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 6,00</p>
+                <button type="button" class="botao botao--add" data-nome="Refri lata" data-preco="6.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Suco natural</h4>
+              <p>Laranja, limonada, abacaxi com hortelã, acerola ou maracujá, 400 ml.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 9,00</p>
+                <button type="button" class="botao botao--add" data-nome="Suco natural" data-preco="9.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Água mineral</h4>
+              <p>Com ou sem gás, 500 ml.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 4,00</p>
+                <button type="button" class="botao botao--add" data-nome="Água mineral" data-preco="4.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Refrigerante 2L</h4>
+              <p>Para dividir na mesa ou levar para casa.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 14,00</p>
+                <button type="button" class="botao botao--add" data-nome="Refrigerante 2 L" data-preco="14.00">Adicionar</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="categoria" aria-labelledby="cat-sobremesas">
+          <h3 id="cat-sobremesas"><span aria-hidden="true">🍰</span> Sobremesas</h3>
+          <div class="grade-cardapio">
+            <article class="item">
+              <h4>Pizza de chocolate</h4>
+              <p>Chocolate ao leite com morangos, tamanho individual.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 32,00</p>
+                <button type="button" class="botao botao--add" data-nome="Pizza de chocolate" data-preco="32.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Casquinha de sorvete</h4>
+              <p>Chocolate, morango, creme, napolitano e flocos.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 12,00</p>
+                <button type="button" class="botao botao--add" data-nome="Casquinha de sorvete" data-preco="12.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Milkshake</h4>
+              <p>Chocolate, morango, creme, napolitano e flocos.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 14,00</p>
+                <button type="button" class="botao botao--add" data-nome="Milkshake" data-preco="14.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Brownie com sorvete</h4>
+              <p>Brownie quente com uma bola de sorvete de creme.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 18,00</p>
+                <button type="button" class="botao botao--add" data-nome="Brownie com sorvete" data-preco="18.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Pudim de leite</h4>
+              <p>Fatia generosa com calda de caramelo.</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 12,00</p>
+                <button type="button" class="botao botao--add" data-nome="Pudim de leite" data-preco="12.00">Adicionar</button>
+              </div>
+            </article>
+            <article class="item">
+              <h4>Especial lariQuei doce</h4>
+              <p>O prato chefe da casa: uma travessa inteira de bolo de chocolate com sorvete (sabor a sua escolha).</p>
+              <div class="item__rodape">
+                <p class="preco">R$ 51,00</p>
+                <button type="button" class="botao botao--add" data-nome="Especial lariQuei doce" data-preco="51.00">Adicionar</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="carrinho" class="secao">
+      <div class="container container--estreito">
+        <h2>Seu pedido</h2>
+        <p class="secao__intro">Adicione itens do cardápio, confira o total e informe o endereço de entrega.</p>
+
+        <ul id="lista-carrinho" class="carrinho" aria-live="polite"></ul>
+        <p id="carrinho-vazio" class="carrinho__vazio">Seu carrinho está vazio. Escolha algo no <a href="#cardapio">cardápio</a>.</p>
+        <p class="carrinho__total">Total <strong id="total">R$ 0,00</strong></p>
+
+        <form id="form-pedido" class="formulario" action="#" method="post" novalidate>
+          <h3>Dados de entrega</h3>
+
+          <div class="campo">
+            <label for="pedido-nome">Nome completo</label>
+            <input type="text" id="pedido-nome" name="nome" autocomplete="name" required>
+          </div>
+
+          <div class="campo">
+            <label for="pedido-telefone">Telefone</label>
+            <input type="tel" id="pedido-telefone" name="telefone" autocomplete="tel" placeholder="(32) 90000-0000" required>
+          </div>
+
+          <div class="campo">
+            <label for="pedido-cep">CEP</label>
+            <input type="text" id="pedido-cep" name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" required>
+          </div>
+
+          <div class="campo">
+            <label for="pedido-rua">Rua</label>
+            <input type="text" id="pedido-rua" name="rua" autocomplete="address-line1" required>
+          </div>
+
+          <div class="campo-linha">
+            <div class="campo">
+              <label for="pedido-numero">Número</label>
+              <input type="text" id="pedido-numero" name="numero" required>
+            </div>
+            <div class="campo">
+              <label for="pedido-complemento">Complemento (opcional)</label>
+              <input type="text" id="pedido-complemento" name="complemento">
+            </div>
+            <div class="campo">
+              <label for="pedido-bairro">Bairro</label>
+              <input type="text" id="pedido-bairro" name="bairro" required>
+            </div>
+          </div>
+
+          <div class="campo-linha">
+            <div class="campo">
+              <label for="pedido-cidade">Cidade</label>
+              <input type="text" id="pedido-cidade" name="cidade" required>
+            </div>
+            <div class="campo">
+              <label for="pedido-uf">UF</label>
+              <input type="text" id="pedido-uf" name="uf" maxlength="2" pattern="[A-Za-z]{2}" required>
+            </div>
+            <div class="campo">
+              <label for="pedido-pagamento">Pagamento</label>
+              <select id="pedido-pagamento" name="pagamento" required>
+                <option value="">Escolha</option>
+                <option>Pix</option>
+                <option>Cartão de débito</option>
+                <option>Cartão de crédito</option>
+                <option>Dinheiro</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="botao botao--amarelo botao--cheio">Enviar pedido</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="horarios" class="secao secao--alt">
+      <div class="container">
+        <h2>Horários de funcionamento</h2>
+        <p class="secao__intro">O delivery começa mais tarde e termina mais cedo que o salão.</p>
+        <div class="tabela-wrap">
+          <table class="tabela">
+            <caption class="sr-only">Horários de funcionamento do salão e do delivery por dia da semana</caption>
+            <thead>
+              <tr>
+                <th scope="col">Dia</th>
+                <th scope="col">Salão</th>
+                <th scope="col">Delivery</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Segunda a quinta</th>
+                <td>18h às 23h</td>
+                <td>18h30 às 22h30</td>
+              </tr>
+              <tr>
+                <th scope="row">Sexta e sábado</th>
+                <td>18h às 1h</td>
+                <td>18h30 às 0h30</td>
+              </tr>
+              <tr>
+                <th scope="row">Domingo</th>
+                <td>17h às 23h</td>
+                <td>17h30 às 22h30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="reserva" class="secao">
+      <div class="container container--estreito">
+        <h2>Reserve sua mesa</h2>
+        <p class="secao__intro">Preencha os dados e confirmamos sua reserva por telefone ou e-mail.</p>
+
+        <form id="form-reserva" class="formulario" action="#" method="post" novalidate>
+          <div class="campo">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(32) 90000-0000" required>
+          </div>
+
+          <div class="campo-linha">
+            <div class="campo">
+              <label for="data">Data</label>
+              <input type="date" id="data" name="data" required>
+            </div>
+            <div class="campo">
+              <label for="hora">Horário</label>
+              <input type="time" id="hora" name="hora" min="17:00" max="23:00" required>
+            </div>
+            <div class="campo">
+              <label for="pessoas">Pessoas</label>
+              <input type="number" id="pessoas" name="pessoas" min="1" max="12" value="2" required>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Observações (opcional)</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Aniversário, cadeirinha de bebê, preferência de lugar..."></textarea>
+          </div>
+
+          <button type="submit" class="botao botao--amarelo botao--cheio">Reservar mesa</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <img src="img/lariQuei_logo_simplificada.png" alt="lariQuei" width="56" height="56">
+      <address>
+        Av. Rango Brabo, 777, Centro<br>
+        <a href="tel:+5532999999999">(32) 99999-9999</a><br>
+        <a href="mailto:contato@lariquei.com.br">contato@lariquei.com.br</a>
+      </address>
+      <p>&copy; 2026 lariQuei. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
